@@ -1,4 +1,6 @@
 安装库
+apt install masscan nmap -y
+yum install masscan nmap -y
 pip2 install python-nmap requests IPy
 
 使用方法：

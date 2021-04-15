@@ -75,7 +75,8 @@ def Scan(scan_ip,masscan_ports):
                     else:
                         scan_url_port = 'http://' + scan_ip + ':' + str(port)
                     final_domains.append(",".join([scan_url_port,service_name, product, version, extrainfo]))
-                final_domains.append(",".join([scan_ip+':'+str(port),service_name, product, version, extrainfo]))
+                else:
+                    final_domains.append(",".join([scan_ip+':'+str(port),service_name, product, version, extrainfo]))
     except Exception as e:
        print e
        pass
@@ -94,7 +95,7 @@ def main():
             queue.put(line)
 
         threads = []
-        thread_count = 20
+        thread_count = 10
         for i in range(thread_count):
             threads.append(PortScan(queue))
         for t in threads:
