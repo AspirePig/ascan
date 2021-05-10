@@ -13,3 +13,8 @@ python2  ascan.py -f [ip.txt]
 
 result_scan.py   nmap结果复核脚本
 domain2ip  批量域名解析IP
+
+
+
+db-check.py 支持 mysql、mssql、oracle、postgresql、redis、mongodb、memcached、elasticsearch、zookeeper、ftp、CouchDB、docker、Hadoop
+
